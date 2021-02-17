@@ -256,7 +256,7 @@ return (
   })
 }
 </select>
-<input type="date" value={selectedDate} className="inputFields" 
+<input type="date" value={selectedDate} placeholder="dd-mm-yyyy" max={new Date().toISOString().slice(0,10)} className="inputFields" 
 onChange={(event)=>{
   setGraphData('')
   setSelectedDate(event.target.value)
@@ -274,7 +274,7 @@ onChange={(event)=>{
   })
 }
 </select>
-<input type="date" value={selectedDate} className="inputFields" 
+<input type="date" value={selectedDate} placeholder="dd-mm-yyyy" max={new Date().toISOString().slice(0,10)} className="inputFields" 
 onChange={(event)=>{
   setGraphData('')
   setSelectedDate(event.target.value)
