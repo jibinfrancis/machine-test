@@ -225,7 +225,8 @@ const options= {
     }
       
     }]
-  }     
+  },
+  maintainAspectRatio: false,     
 }
 return (
 <div className="App">
@@ -274,7 +275,7 @@ onChange={(event)=>{
   })
 }
 </select>
-<input type="date" value={selectedDate} placeholder="dd-mm-yyyy" max={new Date().toISOString().slice(0,10)} className="inputFields" 
+<input type="date"  value={selectedDate} placeholder="dd-mm-yyyy" max={new Date().toISOString().slice(0,10)} className="inputFields" 
 onChange={(event)=>{
   setGraphData('')
   setSelectedDate(event.target.value)
@@ -290,7 +291,7 @@ onChange={(event)=>{
 <div className="graph">
 {graphData&&
 <div className="content">
-<Scatter data={graphData} options={options} />
+<Scatter data={graphData} options={options} height="380px" />
 </div>
 }
 </div>
