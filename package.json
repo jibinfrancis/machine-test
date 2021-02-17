@@ -1,4 +1,4 @@
-{ "homepage": "http://jibinfrancis.github.io/MachineTest",
+{ "homepage": "http://jibinfrancis.github.io/machine-test",
   "name": "machinetest",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

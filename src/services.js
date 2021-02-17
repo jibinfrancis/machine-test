@@ -3,6 +3,7 @@ const API_ROOT = 'https://u50g7n0cbj.execute-api.us-east-1.amazonaws.com/v2/'
 export const locations = `${API_ROOT}locations`;
 export const averages = `${API_ROOT}averages`;
 export const cities  = `${API_ROOT}cities`;
+export const measurements = `${API_ROOT}measurements`;
 export async function getCities() {
     return await axios.get(cities+'?limit=100&page=1&offset=0&sort=asc&order_by=city&country=IN', {
       headers: {
@@ -25,3 +26,12 @@ export async function getCities() {
     });
 
   }
+  export async function getMeasurements(parameter,selectedDate,selectedCity) {
+    return await axios.get(measurements+'?date_from='+selectedDate+'T00%3A00%3A00.000Z&date_to='+selectedDate+'T23%3A59%3A59.999Z&limit=1000&page=1&offset=0&sort=asc&parameter='+parameter+'&radius=1000&city='+selectedCity+'&order_by=datetime', {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+  }
+  

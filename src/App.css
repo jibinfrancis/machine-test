@@ -31,7 +31,14 @@ select{
 .btn:focus{
   outline:0;
 }
-
+.btn-category{
+  width:100px;
+  margin:20px;
+}
+.active{
+  background-color: #003D5B !important;
+  color:#ffffff;
+}
 .navBar{
   position: sticky;
   top:0;
@@ -48,7 +55,28 @@ select{
 }
 .search{
   display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hide{
+  display: none;
+}
+.header{
+  display: flex;
   margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header>p{
+  font-size:25px;
+}
+.category{
+  margin-top:10px !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
